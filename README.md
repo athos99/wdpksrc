@@ -31,8 +31,9 @@ The build environment is also available in a docker image.
 
 .. code::
 
-    docker build -t wdpk .    
-    docker run -it -v $(pwd):/wdpksrc wdpk /bin/bash    
+    docker build -t wdpk .
+    cd wdpksrc    
+    docker run -it -v .:/wdpksrc wdpk /bin/bash    
     cd wdpk/<somepackage>    
     ./build.sh
     
